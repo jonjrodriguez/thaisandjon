@@ -1,0 +1,57 @@
+/* FlexSlider Necessary Styles
+*********************************/ 
+.slider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.slider .slides img {width: 100%; display: block;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+.slider {
+	position: relative;
+	padding: 0 emCalc(16px);
+}
+
+.slides {
+	margin-bottom: 0;
+}
+
+.flex-viewport {
+    @include box-shadow(#777 0 7px 8px -3px);
+    z-index:1;
+}
+
+.flex-direction-nav {
+	position: absolute;
+	bottom: 10%;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	
+	> li {
+		list-style-type: none;
+
+		> a {
+			background: $grey;
+			color: $body-font-color;
+			font-weight: 400;
+			padding: emCalc(5px) emCalc(10px);
+
+			@include box-shadow(#000 0 7px 8px -6px);
+		}
+	}
+}
+
+.flex-prev {
+	float: left;
+}
+
+.flex-next {
+	float: right;
+}

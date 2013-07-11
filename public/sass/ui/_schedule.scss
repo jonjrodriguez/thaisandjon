@@ -1,0 +1,25 @@
+.schedule-header {
+	font-size: emCalc(36px);
+	color: $primary-color;
+	margin-bottom: emCalc(5px);
+}
+
+.schedule-list {
+	list-style-type: none;
+	font-size: emCalc(24px);
+	margin-bottom: 0;
+
+	> li {
+		line-height: 1.2;
+		padding-bottom: emCalc(10px);
+	}
+}
+
+.schedule-time {
+	text-align: right;
+	color: $secondary-color;
+}
+
+.schedule-event {
+	text-align: left;
+}

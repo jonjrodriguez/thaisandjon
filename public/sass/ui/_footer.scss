@@ -1,0 +1,13 @@
+.footer {
+	background: $grey;
+    position: relative;
+
+    @include box-shadow(#777 0 -7px 8px -6px);
+}
+
+.signature {
+   	color: $primary-color;
+   	font-family: $header-font-family;
+   	font-weight: $header-font-weight;
+	font-size: emCalc(30px);
+}

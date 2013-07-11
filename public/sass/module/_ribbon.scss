@@ -1,0 +1,101 @@
+.ribbon {
+     margin-left: -1em;
+     margin-right: -1em;
+}
+
+.ribbon:before,
+.ribbon:after,
+.flex-direction-nav li:before,
+.flex-direction-nav li:after {
+     @media #{$small} {
+          content: "";
+          position: absolute;
+          display: block;
+          bottom: -1em;
+          border: 1.2em solid darken($grey, 10%);
+          z-index: -1;
+     }
+}
+
+.ribbon-reverse:before,
+.ribbon-reverse:after {
+     border: 1.5em solid darken($grey, 10%);
+     bottom: 1em;
+}
+
+.ribbon:before,
+.flex-direction-nav li:before {
+     left: -1.5em;
+     border-right-width: 2em;
+     border-left-color: transparent;
+}
+
+.flex-direction-nav li:before {
+     border-right-width: 1.3em;
+}
+
+.ribbon-reverse:before {
+     left: -2em;
+}
+
+.ribbon:after,
+.flex-direction-nav li:after {
+     right: -1.5em;
+     border-left-width: 2em;
+     border-right-color: transparent;
+}
+
+.flex-direction-nav li:after {
+     border-left-width: 1.3em;
+}
+
+.ribbon-reverse:after {
+     right: -2em;
+}
+
+.ribbon .ribbon-content:before, 
+.ribbon .ribbon-content:after,
+.flex-direction-nav .flex-prev:before,
+.flex-direction-nav .flex-next:after {
+     content: "";
+     position: absolute;
+     display: block;
+     border-style: solid;
+     border-color: darken($grey, 35%) transparent transparent transparent;
+     bottom: -1em;
+}
+
+.ribbon .ribbon-content:before,
+.flex-direction-nav .flex-prev:before {
+     left: 0;
+     border-width: 1em 0 0 1em;
+}
+
+.ribbon .ribbon-content:after,
+.flex-direction-nav .flex-next:after {
+     right: 0;
+     border-width: 1em 1em 0 0;
+}
+
+.ribbon-reverse {
+     > .ribbon-reverse-content:before,
+     > .ribbon-reverse-content:after {
+          content: "";
+          position: absolute;
+          display: block;
+          border-style: solid;
+          top: -1em;
+     }
+
+     > .ribbon-reverse-content:before {
+          left: 0;
+          border-color: transparent darken($grey, 35%) transparent transparent;
+          border-width: 1em 1em 0 0;
+     }
+
+     > .ribbon-reverse-content:after  {
+          right: 0;
+          border-color: transparent transparent transparent darken($grey, 35%);
+          border-width: 1em 0 0 1em;
+     }
+}

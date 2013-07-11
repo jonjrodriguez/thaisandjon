@@ -1,0 +1,45 @@
+.address {
+	padding-left: emCalc(image-width("../images/icons/marker-large-1.png") + 10px);
+	padding-right: 0;
+
+	@media #{$extra-small} {
+		text-align: left;
+	}
+
+	@media #{$small} {
+		margin-bottom: emCalc(40px);
+	}
+
+	&.address-1 {
+		background: inline-image("../images/icons/marker-large-1.png") no-repeat;
+	}
+
+	&.address-2 {
+		background: inline-image("../images/icons/marker-large-2.png") no-repeat;
+	}
+
+	> p {
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+}
+
+.address-title {
+	color: $secondary-color;
+	font-size: emCalc(20px);
+	padding-top: emCalc(5px);
+}
+
+.street-address,
+.directions {
+	font-size: emCalc(18px);
+}
+
+#map_canvas {
+	height: 25em;
+	margin-bottom: emCalc(40px);
+
+	@media #{$small} {
+		margin-bottom: 0;
+	}
+}

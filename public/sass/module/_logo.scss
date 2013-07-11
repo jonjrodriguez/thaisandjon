@@ -1,0 +1,14 @@
+.logo {
+    background: #ffffff;
+    border: 5px solid $grey;
+    display: block;
+    padding: emCalc(5px);
+    z-index: 100;
+
+    @include border-radius(50%);
+    @include box-shadow(#777 0 7px 8px -6px);
+
+    > img {
+        padding: 30% 0; 
+    }
+}

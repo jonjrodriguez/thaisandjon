@@ -1,0 +1,68 @@
+::selection {
+    background: $primary-color;
+    color: #ffffff;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: $primary-color;
+    color: #ffffff;
+    text-shadow: none;
+}
+
+body {
+	background: url("../images/furley_bg.png");
+    text-align: center;
+    font-size: emCalc(12px);
+    padding: emCalc(10px) 1.2em;
+
+    @media #{$extra-small} {
+		font-size: emCalc(14px);
+	}
+
+	@media #{$small} {
+    	font-size: emCalc(16px);
+    	padding: emCalc(20px) 2.5em;
+    }
+}
+
+p {
+	font-weight: 300;
+}
+
+.chromeframe {
+    // margin: 0.2em 0;
+    background: $grey;
+    padding: 0.5em 0.2em;
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+#header {
+    position: relative;
+
+    @include background-image(linear-gradient(transparent 50%, #fff 50%));
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+#main {
+    background: #ffffff;
+}
+
+#wedding-date {
+    color: $secondary-color;
+    font-size: emCalc(18px);
+}
+
+#top,
+#story,
+#location,
+#schedule,
+#rsvp,
+#footer{
+    margin-bottom: emCalc(40px);
+}
