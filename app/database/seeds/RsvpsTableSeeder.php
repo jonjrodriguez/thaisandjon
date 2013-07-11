@@ -16,6 +16,7 @@ class RsvpsTableSeeder extends Seeder {
     		['name' => 'Krista Hattemer', 'guests' => 1],
         	['name' => 'Brandon Burkhart', 'guests' => 1],
     		['name' => 'Lisa Barnett', 'guests' => 2],
+            ['name' => 'Jonathan Rodriguez', 'guests' => 2],
         );
 
         // Uncomment the below to run the seeder

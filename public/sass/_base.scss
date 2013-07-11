@@ -25,28 +25,22 @@ body {
     }
 }
 
+label {
+    display: inline-block;
+}
+
 p {
 	font-weight: 300;
 }
 
-.chromeframe {
-    // margin: 0.2em 0;
-    background: $grey;
-    padding: 0.5em 0.2em;
-
-    a {
-        text-decoration: underline;
-    }
+h2 {
+    margin-bottom: 0;
 }
 
 #header {
     position: relative;
 
     @include background-image(linear-gradient(transparent 50%, #fff 50%));
-}
-
-h2 {
-    margin-bottom: 0;
 }
 
 #main {
@@ -65,4 +59,23 @@ h2 {
 #rsvp,
 #footer{
     margin-bottom: emCalc(40px);
+}
+
+.error {
+    list-style-type: none;
+    @include panel(#ffdbe1);
+}
+
+.success {
+    @include panel(#b8e8a0);
+}
+
+.chromeframe {
+    // margin: 0.2em 0;
+    background: $grey;
+    padding: 0.5em 0.2em;
+
+    a {
+        text-decoration: underline;
+    }
 }

@@ -17,7 +17,7 @@ class CreateRsvpsTable extends Migration {
             $table->string('name');
 			$table->string('email')->nullable();
 			$table->string('phone')->nullable();
-			$table->boolean('attending')->default(0);
+			$table->string('attending')->default('N/A');
 			$table->integer('guests');
             $table->timestamps();
         });

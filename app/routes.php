@@ -11,6 +11,6 @@
 |
 */
 
-Route::resource('/', 'IndexController');
+Route::controller('/', 'IndexController');
 
 Route::resource('rsvps', 'RsvpsController');
