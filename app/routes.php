@@ -13,6 +13,6 @@
 
 Route::controller('/', 'IndexController');
 
-Route::resource('rsvps', 'RsvpsController');
+// Route::resource('rsvps', 'RsvpsController');
 
-Route::resource('guests', 'GuestsController');
+// Route::resource('guests', 'GuestsController');
