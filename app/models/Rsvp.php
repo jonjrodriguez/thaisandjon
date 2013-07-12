@@ -17,4 +17,9 @@ class Rsvp extends Eloquent {
     	'phone.required' => "Enter your phone number in case we need to contact you.",
     	'email.email' => "That doesn't look like a real email address to us."
 	);
+
+    public function guests()
+    {
+        return $this->hasMany('Guest');
+    }
 }

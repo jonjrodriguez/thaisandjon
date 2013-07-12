@@ -47,6 +47,12 @@ h2 {
     background: #ffffff;
 }
 
+.content {
+    a {
+        text-decoration: underline;
+    }
+}
+
 #wedding-date {
     color: $secondary-color;
     font-size: emCalc(18px);
@@ -63,11 +69,11 @@ h2 {
 
 .error {
     list-style-type: none;
-    @include panel(#ffdbe1);
+    @include panel($alert-color);
 }
 
 .success {
-    @include panel(#b8e8a0);
+    @include panel($success-color);
 }
 
 .chromeframe {

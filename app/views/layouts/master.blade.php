@@ -13,9 +13,9 @@
 
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400|Tangerine:700|Petit+Formal+Script' rel='stylesheet' type='text/css'>
         
-        <link rel="stylesheet" href="css/app.css" />
+        <link rel="stylesheet" href="/css/app.css" />
 
-        <script src="js/vendor/custom.modernizr.js"></script>
+        <script src="/js/vendor/custom.modernizr.js"></script>
 
     </head>
     <body>
@@ -26,23 +26,23 @@
         <p id="wedding-date">Saturday, September 7, 2013</p>
 
         <header id="header" class="row">
-            <a class="logo large-2 small-4 small-centered columns" href="/"><img src="images/logo.png" alt="Thais and Jon are getting married" /></a>
+            <a class="logo large-2 small-4 small-centered columns" href="/"><img src="/images/logo.png" alt="Thais and Jon are getting married" /></a>
             
             <nav class="site-nav ribbon">
                 <div class="ribbon-content">
                     <div id="nav">
                         <ul class="nav">
-                            <li class="large-2 small-4 columns"><a href="/#story">story</a></li>
-                            <li class="large-3 small-4 small-offset-4 large-offset-0 columns"><a href="/#location">location</a></li>
-                            <li class="large-3 small-4 large-offset-2 columns"><a href="/#schedule">schedule</a></li>
-                            <li class="large-2 small-4 columns"><a href="/#rsvp">rsvp</a></li>
+                            <li class="large-2 small-4 columns"><a href="/story">story</a></li>
+                            <li class="large-3 small-4 small-offset-4 large-offset-0 columns"><a href="/location">location</a></li>
+                            <li class="large-3 small-4 large-offset-2 columns"><a href="/schedule">schedule</a></li>
+                            <li class="large-2 small-4 columns"><a href="/rsvp">rsvp</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
 
-        <div id="main" class="row">
+        <div id="main" class="row content">
             
             @yield('content')
 
@@ -51,14 +51,14 @@
         <footer id="footer" class="row">
             <div class="ribbon ribbon-reverse footer">
                 <div class="ribbon-reverse-content">
-                    <p class="signature">Thais <img src="images/icons/hearts.png" alt="<3" /> Jon</p>
+                    <p class="signature">Thais <img src="/images/icons/hearts.png" alt="<3" /> Jon</p>
                 </div>
             </div>
         </footer>
 
 
         <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBkUMm4kUSUp9KLRz5DRExh8ZlOuOM6uCc&sensor=false"></script>
-        <script src="js/main-min.js"></script>
+        <script src="/js/main-min.js"></script>
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

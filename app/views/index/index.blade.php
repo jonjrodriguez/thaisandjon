@@ -1,21 +1,21 @@
 @section('content')
     
-    @include('home._top')
+    @include('index._top')
 
     <div class="divider"><span></span></div>
 
-    @include('home._story')
+    @include('index._story')
 
     <div class="divider"><span></span></div>
 
-    @include('home._location')
+    @include('index._location')
     
     <div class="divider"><span></span></div>
 
-    @include('home._schedule')
+    @include('index._schedule')
 
     <div class="divider"><span></span></div>
 
-    @include('home._form')
+    @include('index._rsvp')
 
 @stop

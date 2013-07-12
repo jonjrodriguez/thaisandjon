@@ -16,6 +16,10 @@ html[xmlns] .slides {display: block;}
 .slider {
 	position: relative;
 	padding: 0 emCalc(16px);
+
+	a {
+		text-decoration: none;
+	}
 }
 
 .slides {

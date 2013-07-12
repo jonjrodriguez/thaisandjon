@@ -1,0 +1,11 @@
+.attending {
+	color: darken($success-color, 30%);
+    font-size: emCalc(18px);
+    font-weight: 700;
+}
+
+.not-attending {
+	color: darken($alert-color, 30%);
+    font-size: emCalc(18px);
+    font-weight: 700;
+}

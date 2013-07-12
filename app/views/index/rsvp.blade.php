@@ -1,5 +1,5 @@
 @section('content')
     
-    @include('home._form')
+    @include('index._rsvp')
 
 @stop

@@ -9,12 +9,6 @@
         </ul>
     @endif
 
-    @if(isset($message))
-        <div class="success">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-
     {{ Form::open(array('action' => 'IndexController@postRsvp', 'class' => 'custom')) }}
     
         <div class="row rsvp">
@@ -30,8 +24,8 @@
         </div>
 
         <div class="large-8 columns small-centered">
-            {{ Form::text('name', Input::old('name'), array('placeholder'=>'Name')) }}
-        </div>
+                    {{ Form::text('name', Input::old('name'), array('placeholder'=>'Full Name')) }}
+                </div>
 
         <div class="large-8 columns small-centered">
             {{ Form::text('phone', Input::old('phone'), array('placeholder'=>'Phone')) }}
@@ -53,5 +47,5 @@
 
     {{ Form::close() }}
 
-    <p class="columns small-centered">If you have any issues submitting your RSVP, please email us at rsvp@thaisandjon.com.</p>
+    <p class="columns small-centered">If you have any issues submitting your RSVP, please email us at <a href="mailto:rsvp@thaisandjon.com">rsvp@thaisandjon.com</a>.</p>
 </section>
