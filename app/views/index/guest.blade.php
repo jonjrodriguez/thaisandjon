@@ -30,7 +30,7 @@
 		    <p>It looks like we were being nice and allowed you {{ $rsvp->guests }} guest(s).  Type in their names below if you're bringing anyone.  If not, we'll keep you company.</p>
 		</div>
 
-		{{ Form::open(array('action' => 'IndexController@postGuests')) }}
+		{{ Form::open(array('action' => 'IndexController@postGuest')) }}
 			{{ Form::hidden('rsvp_id', $rsvp->id) }}
 
 			@for ($i = 0; $i < $rsvp->guests; $i++)

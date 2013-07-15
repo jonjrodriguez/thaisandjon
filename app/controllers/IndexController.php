@@ -6,7 +6,6 @@ class IndexController extends BaseController {
      * The layout that should be used for responses.
      */
     protected $layout = 'layouts.master';
-
     
     public function getIndex()
     {
@@ -44,7 +43,7 @@ class IndexController extends BaseController {
             $rsvp = Rsvp::where('name', $input['name'])->first();
             $rsvp->update($input);
 
-            return Redirect::action('IndexController@getGuests')
+            return Redirect::action('IndexController@getGuest')
                 ->with('rsvp_id', $rsvp->id);
         }
 
@@ -53,20 +52,21 @@ class IndexController extends BaseController {
                 ->withErrors($validation);
     }
 
-    public function getGuests()
+    public function getGuest()
     {
         $rsvp = Rsvp::find(Session::get('rsvp_id', Input::old('rsvp_id')));
 
         if(!$rsvp) {
-            return Redirect::to('/');
+            return Redirect::action('IndexController@getRsvp')
+                ->with('message', 'If you wish to add guests, please go through the RSVP process.');
         }
 
-        $this->layout->content = View::make('index.guests')
+        $this->layout->content = View::make('index.guest')
             ->with('rsvp', $rsvp)
             ->with('message', Session::get('message'));
     }
 
-    public function postGuests()
+    public function postGuest()
     {
         $input = Input::all();
 
@@ -80,7 +80,7 @@ class IndexController extends BaseController {
             }
         }
 
-        return Redirect::action('IndexController@getGuests')
+        return Redirect::action('IndexController@getGuest')
             ->withInput()
             ->with('message', "Thanks for letting us know who's coming.  You can edit them below or go through the RSVP process again.  You know, in case you don't like them anymore.");
     }

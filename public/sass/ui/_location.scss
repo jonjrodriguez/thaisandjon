@@ -1,13 +1,23 @@
 .address {
+	min-height: 75px;
 	padding-left: emCalc(image-width("../images/icons/marker-large-1.png") + 10px);
 	padding-right: 0;
+
+	> p {
+		margin-bottom: 0;
+		line-height: 1.2;
+	}
+
+	&.top {
+		margin-bottom: 1em;
+	}
 
 	@media #{$extra-small} {
 		text-align: left;
 	}
 
 	@media #{$small} {
-		margin-bottom: emCalc(40px);
+		margin-bottom: emCalc(30px);
 	}
 
 	&.address-1 {
@@ -17,11 +27,6 @@
 	&.address-2 {
 		background: inline-image("../images/icons/marker-large-2.png") no-repeat;
 	}
-
-	> p {
-		margin-bottom: 0;
-		line-height: 1.2;
-	}
 }
 
 .address-title {
@@ -30,14 +35,13 @@
 	padding-top: emCalc(5px);
 }
 
-.street-address,
 .directions {
 	font-size: emCalc(18px);
 }
 
 #map_canvas {
-	height: 25em;
-	margin-bottom: emCalc(40px);
+	height: emCalc(400px);
+	margin-bottom: emCalc(30px);
 
 	@media #{$small} {
 		margin-bottom: 0;
