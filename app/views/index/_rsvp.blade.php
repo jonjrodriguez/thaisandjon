@@ -30,8 +30,8 @@
         </div>
 
         <div class="large-8 columns small-centered">
-                    {{ Form::text('name', Input::old('name'), array('placeholder'=>'Full Name')) }}
-                </div>
+            {{ Form::text('name', Input::old('name'), array('placeholder'=>'Full Name')) }}
+        </div>
 
         <div class="large-8 columns small-centered">
             {{ Form::text('phone', Input::old('phone'), array('placeholder'=>'Phone')) }}

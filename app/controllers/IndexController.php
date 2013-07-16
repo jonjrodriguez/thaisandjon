@@ -43,6 +43,10 @@ class IndexController extends BaseController {
             $rsvp = Rsvp::where('name', $input['name'])->first();
             $rsvp->update($input);
 
+            if($rsvp->attending == "not-attending") {
+                $rsvp->guests()->delete();
+            }
+
             return Redirect::action('IndexController@getGuest')
                 ->with('rsvp_id', $rsvp->id);
         }
@@ -61,9 +65,13 @@ class IndexController extends BaseController {
                 ->with('message', 'If you wish to add guests, please go through the RSVP process.');
         }
 
+        if($rsvp->attending == "not-attending" || $rsvp->guests == 0) {
+            return Redirect::action('IndexController@getSuccess')
+                ->with('rsvp_id', $rsvp->id);;
+        }
+
         $this->layout->content = View::make('index.guest')
-            ->with('rsvp', $rsvp)
-            ->with('message', Session::get('message'));
+            ->with('rsvp', $rsvp);
     }
 
     public function postGuest()
@@ -80,9 +88,21 @@ class IndexController extends BaseController {
             }
         }
 
-        return Redirect::action('IndexController@getGuest')
-            ->withInput()
-            ->with('message', "Thanks for letting us know who's coming.  You can edit them below or go through the RSVP process again.  You know, in case you don't like them anymore.");
+        return Redirect::action('IndexController@getSuccess')
+                ->with('rsvp_id', $rsvp->id);
+    }
+
+    public function getSuccess()
+    {
+        $rsvp = Rsvp::find(Session::get('rsvp_id'));
+
+        if(!$rsvp) {
+            return Redirect::action('IndexController@getRsvp')
+                ->with('message', 'Sorry, no party crashers, please go through the RSVP process.');
+        }
+
+        $this->layout->content = View::make('index.success')
+            ->with('rsvp', $rsvp);
     }
 
 }

@@ -72,13 +72,16 @@
     var scholastic = new google.maps.LatLng(40.724007, -73.998229);
     var scholastic_image = "images/icons/marker-1.png";
 
-    var carlton = new google.maps.LatLng(40.744413, -73.985426);
-    var carlton_image = "images/icons/marker-2.png";
+    var marriott = new google.maps.LatLng(40.766292, -73.978508);
+    var marriott_image = "images/icons/marker-2.png";
+
+    var parking = new google.maps.LatLng(40.725549, -73.995573);
+    var parking_image = "images/icons/marker-3.png";
 
     function initialize() {
         var mapOptions = {
-            zoom: 13,
-            center: new google.maps.LatLng(40.735266,-73.991354),
+            zoom: 12,
+            center: new google.maps.LatLng(40.746036, -73.990538),
             styles: styles,
             panControl: false,
             mapTypeControl: false,
@@ -95,10 +98,17 @@
         });
 
         var marker2 = new google.maps.Marker({
-            position: carlton,
+            position: marriott,
             map: map,
-            title:"The Scholastic Building",
-            icon: carlton_image
+            title:"JW Marriott Essex House",
+            icon: marriott_image
+        });
+
+        var marker3 = new google.maps.Marker({
+            position: parking,
+            map: map,
+            title:"Soho Village Parking",
+            icon: parking_image
         });
     }
     google.maps.event.addDomListener(window, 'load', initialize);

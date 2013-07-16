@@ -24,7 +24,7 @@
             </li>
             <li class="row">
                 <span class="schedule-time small-6 large-4 columns">8 - 11:30pm</span>
-                <span class="schedule-event small-6 large-8 columns">Reception in greenhouse</span>
+                <span class="schedule-event small-6 large-8 columns">Reception in the greenhouse</span>
             </li>
             <li class="row">
                 <span class="schedule-time small-6 large-4 columns">11:30pm</span>
