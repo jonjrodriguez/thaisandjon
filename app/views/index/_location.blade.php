@@ -1,6 +1,6 @@
 <section id="location" class="large-10 small-centered columns">
     <h2>The Location</h2>
-    <p class="large-11 columns small-centered">Below you'll find the addresses of the venue and nearby parking. Be sure to check <a href="http://nyc.bestparking.com">BestParking.com</a> for other parking options and coupons. We'll be staying at The JW Marriott Essex House for the night. All guests are welcomed to stay, but, there are cheaper options available near the venue if you check <a href="http://expedia.com">Expedia</a> or <a href="http://airbnb.com">Air B&amp;B</a>.</p>
+    <p class="large-11 columns small-centered">Here are the addresses of the venue and nearby parking. Be sure to check <a href="http://nyc.bestparking.com">BestParking.com</a> for other parking options and coupons. We'll be staying at The JW Marriott Essex House. All guests are welcomed to book a room at the Essex House, but there are more affordable options near the venue if you check <a href="http://airbnb.com">Air B&amp;B</a> or <a href="http://expedia.com">Expedia</a>.</p>
 
     <div class="row">                
         <div class="large-8 small-10 small-centered large-uncentered columns" id="map_canvas"></div>

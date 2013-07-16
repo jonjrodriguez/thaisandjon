@@ -4,7 +4,7 @@
         <p class="schedule-header">Friday, September 6</p>
         <ul class="schedule-list">
             <li class="row">
-                <span class="schedule-time small-6 large-4 columns">6:15pm</span>
+                <span class="schedule-time small-6 large-4 columns">7pm</span>
                 <span class="schedule-event small-6 large-8 columns">Rehearsal Dinner</span>
             </li>
         </ul>
@@ -38,7 +38,7 @@
         <p class="schedule-header">Sunday, September 8</p>
         <ul class="schedule-list">
             <li class="row">
-                <span class="schedule-time small-6 large-4 columns">6:15pm</span>
+                <span class="schedule-time small-6 large-4 columns">3pm</span>
                 <span class="schedule-event small-6 large-8 columns">Brunch with the newlyweds</span>
             </li>
         </ul>
