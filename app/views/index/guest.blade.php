@@ -6,7 +6,7 @@
     
 @if( ($rsvp->attending === "attending") && ($rsvp->guests > 0))
 
-	<div class="success">
+	<div class="success-panel">
 	    <p>It looks like we were being nice and allowed you {{ $rsvp->guests }} guest(s).  Type in their names below if you're bringing anyone.  If not, leave it blank and continue on...don't worry, we'll keep you company.</p>
 	</div>
 

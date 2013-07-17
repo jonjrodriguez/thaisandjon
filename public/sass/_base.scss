@@ -68,13 +68,13 @@ h2 {
     margin-bottom: emCalc(40px);
 }
 
-.error {
+.error-panel {
     list-style-type: none;
-    @include panel($alert-color);
+    @include panel(#ffdbe1);
 }
 
-.success {
-    @include panel($success-color);
+.success-panel {
+    @include panel(#b8e8a0);
 }
 
 .chromeframe {

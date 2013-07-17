@@ -56,9 +56,7 @@
             </div>
         </footer>
 
-
-        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBkUMm4kUSUp9KLRz5DRExh8ZlOuOM6uCc&sensor=false"></script>
-        <script src="/js/main-min.js"></script>
+        @yield('script')
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

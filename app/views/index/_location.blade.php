@@ -23,7 +23,7 @@
             <div class="small-6 large-12 columns address address-2">
                 <p class="address-title">JW Marriott Essex House</p>
                 <p>
-                    <a class="directions" href="https://maps.google.com/maps?daddr=W+Marriott+Essex+House+New+York,+160+Central+Park+South,+New+York,+NY" />Directions</a>
+                    <a class="directions" href="https://maps.google.com/maps?daddr=JW+Marriott+Essex+House+New+York,+160+Central+Park+South,+New+York,+NY" />Directions</a>
                 </p>
             </div>
     </div>

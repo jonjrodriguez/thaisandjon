@@ -11,11 +11,11 @@
 	    	<legend>RSVP Info</legend>
 
 			@if($rsvp->attending === "attending")
-				<div class="success">
+				<div class="success-panel">
     				<p class="attending">We look forward to seeing you on the big day!</p>
     			</div>
     		@else
-    			<div class="error">
+    			<div class="error-panel">
     				<p class="not-attending">Sorry you can't make it, but we'll keep you in our hearts.</p>
 				</div>
     		@endif

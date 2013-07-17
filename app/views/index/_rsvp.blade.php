@@ -4,18 +4,18 @@
     if you can’t make it, you will be with us in spirit.</p>
 
     @if (isset($message))
-        <div class="error">
+        <div class="error-panel">
             <p>{{ $message }}</p>
         </div>
     @endif
 
     @if ($errors->any())
-        <ul class="error">
+        <ul class="error-panel">
             {{ implode('', $errors->all('<li>:message</li>')) }}
         </ul>
     @endif
 
-    {{ Form::open(array('action' => 'IndexController@postRsvp', 'class' => 'custom')) }}
+    {{ Form::open(array('action' => 'IndexController@postRsvp', 'class' => 'parsley-form custom', 'id' => 'rsvp_form', 'novalidate' => 'novalidate')) }}
     
         <div class="row rsvp">
             <div class="large-6 columns">
@@ -24,21 +24,21 @@
             </div>
 
             <div class="large-6 columns">
-                {{ Form::radio('attending', "not-attending", false, array('id' => 'rsvp2')) }}
+                {{ Form::radio('attending', "not-attending", false, array('id' => 'rsvp2', 'data-required' => 'true', 'data-error-message' => "Hey, pick whether you're joining us or not!")) }}
                 {{ Form::label('rsvp2', "Will be celebrating from afar") }}
             </div>
         </div>
 
         <div class="large-8 columns small-centered">
-            {{ Form::text('name', Input::old('name'), array('placeholder'=>'Full Name')) }}
+            {{ Form::text('name', Input::old('name'), array('placeholder'=>'Full Name', 'data-required' => 'true', 'data-error-message' => "Sorry, but we can't find you on the guest list.  Please make sure to type in your name as it appeared on the invite.")) }}
         </div>
 
         <div class="large-8 columns small-centered">
-            {{ Form::text('phone', Input::old('phone'), array('placeholder'=>'Phone')) }}
+            {{ Form::text('phone', Input::old('phone'), array('placeholder'=>'Phone', 'data-required' => 'true', 'data-type' => 'phone', 'data-error-message' => "Enter your phone number in case we need to contact you.")) }}
         </div>
 
         <div class="large-8 columns small-centered">
-            {{ Form::email('email', Input::old('email'), array('placeholder'=>'Email')) }}
+            {{ Form::email('email', Input::old('email'), array('placeholder'=>'Email', 'data-type' => 'email', 'data-error-message' => "That doesn't look like a real email address to us.")) }}
         </div>
 
         <div class="large-8 columns small-centered">
