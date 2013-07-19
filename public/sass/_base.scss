@@ -37,6 +37,14 @@ h2 {
     margin-bottom: 0;
 }
 
+table {
+    width: 100%;
+
+    form {
+        margin: 0;
+    }
+}
+
 #header {
     position: relative;
 
@@ -51,6 +59,10 @@ h2 {
 .content {
     a {
         text-decoration: underline;
+
+        &.button {
+            text-decoration: none;
+        }
     }
 }
 
@@ -71,6 +83,14 @@ h2 {
 .error-panel {
     list-style-type: none;
     @include panel(#ffdbe1);
+
+    &.flash-error {
+        margin: 1em 2em 0 2em;
+
+        @media #{$small} {
+            margin: 1em 5em 0 5em;
+        }
+    }
 }
 
 .success-panel {
@@ -78,7 +98,6 @@ h2 {
 }
 
 .chromeframe {
-    // margin: 0.2em 0;
     background: $grey;
     padding: 0.5em 0.2em;
 

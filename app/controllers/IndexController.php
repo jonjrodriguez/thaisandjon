@@ -29,8 +29,7 @@ class IndexController extends BaseController {
 
     public function getRsvp()
     {
-        $this->layout->content = View::make('index.rsvp')
-            ->with('message', Session::get('message'));
+        $this->layout->content = View::make('index.rsvp');
     }
 
     public function postRsvp()

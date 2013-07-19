@@ -3,13 +3,28 @@
 class RsvpsController extends BaseController {
 
     /**
+     * Rsvp Repository
+     *
+     * @var Rsvp
+     */
+    protected $rsvp;
+
+    public function __construct(Rsvp $rsvp)
+    {
+        $this->beforeFilter('auth.basic');
+        $this->rsvp = $rsvp;
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return Response
      */
     public function index()
     {
-        //
+        $rsvps = $this->rsvp->get();
+
+        return View::make('rsvps.index', compact('rsvps'));
     }
 
     /**
@@ -19,7 +34,7 @@ class RsvpsController extends BaseController {
      */
     public function create()
     {
-        //
+        return View::make('rsvps.create');
     }
 
     /**
@@ -29,7 +44,20 @@ class RsvpsController extends BaseController {
      */
     public function store()
     {
-        //
+        $input = Input::all();
+        $validation = Validator::make($input, Rsvp::$admin_rules);
+
+        if ($validation->passes())
+        {
+            $this->rsvp->create($input);
+
+            return Redirect::route('rsvps.index');
+        }
+
+        return Redirect::route('rsvps.create')
+            ->withInput()
+            ->withErrors($validation)
+            ->with('message', 'There were validation errors.');
     }
 
     /**
@@ -40,7 +68,9 @@ class RsvpsController extends BaseController {
      */
     public function show($id)
     {
-        //
+        $rsvp = $this->rsvp->findOrFail($id);
+
+        return View::make('rsvps.show', compact('rsvp'));
     }
 
     /**
@@ -51,7 +81,14 @@ class RsvpsController extends BaseController {
      */
     public function edit($id)
     {
-        //
+        $rsvp = $this->rsvp->find($id);
+
+        if (is_null($rsvp))
+        {
+            return Redirect::route('rsvps.index');
+        }
+
+        return View::make('rsvps.edit', compact('rsvp'));
     }
 
     /**
@@ -62,7 +99,31 @@ class RsvpsController extends BaseController {
      */
     public function update($id)
     {
-        //
+        $input = array_except(Input::all(), array('_method', 'guest'));
+        $validation = Validator::make($input, Rsvp::$admin_rules);
+
+        if ($validation->passes())
+        {
+            $rsvp = $this->rsvp->find($id);
+            $rsvp->update($input);
+            $rsvp->guests()->delete();
+
+            $guests = Input::get('guest');
+
+            foreach($guests as $name) {
+            if(trim($name) != "") {
+                $guest = new Guest(array('name' => $name));
+                $guest = $rsvp->guests()->save($guest);
+            }
+        }
+
+            return Redirect::route('rsvps.show', $id);
+        }
+
+        return Redirect::route('rsvps.edit', $id)
+            ->withInput()
+            ->withErrors($validation)
+            ->with('message', 'There were validation errors.');
     }
 
     /**
@@ -73,7 +134,9 @@ class RsvpsController extends BaseController {
      */
     public function destroy($id)
     {
-        //
+        $this->rsvp->find($id)->delete();
+
+        return Redirect::route('rsvps.index');
     }
 
 }

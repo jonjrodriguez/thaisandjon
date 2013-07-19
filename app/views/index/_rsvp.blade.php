@@ -3,12 +3,6 @@
     <p class="large-10 columns small-centered">We would be pleased if you would join us on this special occasion.  We know that even
     if you can’t make it, you will be with us in spirit.</p>
 
-    @if (isset($message))
-        <div class="error-panel">
-            <p>{{ $message }}</p>
-        </div>
-    @endif
-
     @if ($errors->any())
         <ul class="error-panel">
             {{ implode('', $errors->all('<li>:message</li>')) }}

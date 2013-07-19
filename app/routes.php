@@ -11,8 +11,7 @@
 |
 */
 
+
+Route::resource('rsvps', 'RsvpsController');
+
 Route::controller('/', 'IndexController');
-
-// Route::resource('rsvps', 'RsvpsController');
-
-// Route::resource('guests', 'GuestsController');

@@ -1,13 +1,19 @@
 <?php
 
 class Rsvp extends Eloquent {
-    protected $guarded = array('id', 'name', 'guests');
+    protected $guarded = array('id');
 
     public static $rules = array(
     	'attending' => 'required',
     	'name' => array('required', 'exists:rsvps'),
     	'phone' => 'required',
     	'email' => 'email',
+    );
+
+    public static $admin_rules = array(
+        'name' => 'required',
+        'attending' => array('required', 'in:N/A,attending,not-attending'),
+        'guests' => array('required', 'integer')
     );
 
     public static $messages = array(

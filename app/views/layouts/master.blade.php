@@ -43,6 +43,12 @@
         </header>
 
         <div id="main" class="row content">
+
+            @if (Session::has('message'))
+                <div class="error-panel flash-error">
+                    <p>{{ Session::get('message') }}</p>
+                </div>
+            @endif
             
             @yield('content')
 

@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder {
 		// $this->call('UserTableSeeder');
 		$this->call('RsvpsTableSeeder');
 		// $this->call('GuestsTableSeeder');
+		$this->call('RsvpsTableSeeder');
+		$this->call('RsvpsTableSeeder');
 	}
 
 }
