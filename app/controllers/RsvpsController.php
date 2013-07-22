@@ -110,12 +110,14 @@ class RsvpsController extends BaseController {
 
             $guests = Input::get('guest');
 
-            foreach($guests as $name) {
-            if(trim($name) != "") {
-                $guest = new Guest(array('name' => $name));
-                $guest = $rsvp->guests()->save($guest);
+            if(isset($guests)) {
+                foreach($guests as $name) {
+                    if(trim($name) != "") {
+                        $guest = new Guest(array('name' => $name));
+                        $guest = $rsvp->guests()->save($guest);
+                    }
+                }
             }
-        }
 
             return Redirect::route('rsvps.show', $id);
         }
