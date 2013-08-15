@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2>All Rsvps</h2>
+<h2>All Rsvps - {{ $total_count }}</h2>
 
 <p>{{ link_to_route('rsvps.create', 'Add new rsvp') }}</p>
 

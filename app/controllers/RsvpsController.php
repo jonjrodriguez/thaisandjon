@@ -9,10 +9,13 @@ class RsvpsController extends BaseController {
      */
     protected $rsvp;
 
-    public function __construct(Rsvp $rsvp)
+    protected $guest;
+
+    public function __construct(Rsvp $rsvp, Guest $guest)
     {
         $this->beforeFilter('auth.basic');
         $this->rsvp = $rsvp;
+        $this->guest = $guest;
     }
 
     /**
@@ -24,7 +27,11 @@ class RsvpsController extends BaseController {
     {
         $rsvps = $this->rsvp->get();
 
-        return View::make('rsvps.index', compact('rsvps'));
+        $rsvp_count = $this->rsvp->where('attending', 'attending')->count();
+        $guest_count = $this->guest->count();
+        $total_count = $rsvp_count + $guest_count;
+
+        return View::make('rsvps.index', compact('rsvps', 'total_count'));
     }
 
     /**
