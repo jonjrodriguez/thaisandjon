@@ -71,6 +71,9 @@
   var parking = new google.maps.LatLng(40.725549, -73.995573);
   var parking_image = "images/icons/marker-3.png";
 
+  var monarch = new google.maps.LatLng(40.750418, -73.987165);
+  var monarch_image = "images/icons/marker-1.png";
+
   function initialize() {
       var mapOptions = {
           zoom: 12,
@@ -102,6 +105,13 @@
           map: map,
           title:"Soho Village Parking",
           icon: parking_image
+      });
+
+      var marker4 = new google.maps.Marker({
+          position: monarch,
+          map: map,
+          title:"Monarch Rooftop Lounge",
+          icon: monarch_image
       });
   }
   google.maps.event.addDomListener(window, 'load', initialize);

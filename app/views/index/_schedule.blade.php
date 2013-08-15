@@ -1,14 +1,13 @@
 <section id="schedule" class="large-8 small-centered columns">
     <h2>Schedule</h2>
     <div class="schedule">
-        <p class="schedule-header">Friday, September 6</p>
+        <p class="schedule-header">Thursday, September 5</p>
         <ul class="schedule-list">
             <li class="row">
-                <span class="schedule-time small-6 large-4 columns">7pm</span>
+                <span class="schedule-time small-6 large-4 columns">5:30pm</span>
                 <span class="schedule-event small-6 large-8 columns">Rehearsal Dinner</span>
             </li>
         </ul>
-        <p>Location: TBA</p>
     </div>
 
     <div class="schedule">
@@ -28,10 +27,10 @@
             </li>
             <li class="row">
                 <span class="schedule-time small-6 large-4 columns">11:30pm</span>
-                <span class="schedule-event small-6 large-8 columns">After-party in NYC</span>
+                <span class="schedule-event small-6 large-8 columns">After-party at {{ link_to('http://www.addisongroupnyc.com/venues/monarch/', 'Monarch Rooftop Lounge') }}</span>
             </li>
         </ul>
-        <p>Of course, we're gonna keep the party going.  Join us after the reception for drinks and music in the city.  We'll figure out where closer to the date.</p>
+        <p>Of course, we're gonna keep the party going.  Join us after the reception for drinks and music in the city.  Reservations are under Jon and Thais.</p>
     </div>
 
     <div class="schedule">

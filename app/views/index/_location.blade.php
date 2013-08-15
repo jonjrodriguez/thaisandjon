@@ -26,6 +26,13 @@
                     <a class="directions" href="https://maps.google.com/maps?daddr=JW+Marriott+Essex+House+New+York,+160+Central+Park+South,+New+York,+NY" />Directions</a>
                 </p>
             </div>
+
+            <div class="small-6 large-12 columns address address-1">
+                <p class="address-title">Monarch Rooftop Lounge</p>
+                <p>
+                    <a class="directions" href="https://maps.google.com/maps?daddr=Monarch+Rooftop+Lounge,+71+W+35th+St,+New+York,+10018" />Directions</a>
+                </p>
+            </div>
     </div>
     
 </section>
